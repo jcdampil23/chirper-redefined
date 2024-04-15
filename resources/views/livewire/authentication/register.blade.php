@@ -32,8 +32,7 @@
             <x-form.label for="password_confirmation">Confirm
                 password</x-form.label>
             <x-form.input id="password_confirmation"
-                          name="password_confirmation"
-                          type="password_confirmation"
+                          name="password_confirmation" type="password"
                           wire:model="form.password_confirmation" />
         </div>
 

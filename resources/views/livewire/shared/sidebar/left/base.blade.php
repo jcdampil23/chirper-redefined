@@ -1,7 +1,7 @@
 <div
-     class="flex w-1/12 min-w-20 flex-col items-end justify-between md:w-3/12 xl:w-4/12">
+     class="flex h-screen w-1/12 min-w-20 flex-col items-end justify-between md:w-3/12 xl:w-4/12 sticky top-0">
     <section
-             class="fixed flex h-full w-1/12 min-w-20 flex-col justify-between px-2 py-4 md:w-3/12 md:px-4 lg:pl-32">
+             class="flex h-full min-w-20 flex-col justify-between px-2 py-4 md:px-4 lg:pl-32">
         <div class="flex min-w-12 flex-col items-center gap-8 md:items-start">
             <svg class="text-rose-400" xmlns="http://www.w3.org/2000/svg"
                  width="50" height="auto" viewBox="0 0 84.1 57.6">
@@ -27,18 +27,18 @@
         </div>
         <div>
             <ul class="flex w-full flex-col gap-8">
-                <li class="flex cursor-pointer items-center justify-center gap-4 font-bold md:justify-start"
-                    wire:click="redirectTo('/chirps')">
-                    <svg class="text-rose-400" id="bird"
-                         xmlns="http://www.w3.org/2000/svg" width="30"
-                         viewBox="0 0 128 128">
-                        <g data-name="Layer 2">
-                            <path fill="currentcolor"
-                                  d="M112 52s11.125-3.875 15.998-12c-6.371.875-13.666-.666-15.998-3.998V16a8 8 0 0 0-8-8H40.251s8-2.668 7.25-5c-.956-2.977-9.667.75-16.834 3.75 1.917-2.084 3.417-4.168 3.167-6.75-5.07 1.285-9.365 5.703-11.343 8.145-.027.005-.055.007-.082.013.594-1.154 2.06-4.117 1.675-5.658A14.557 14.557 0 0 0 16 16v76c0 8-8 12-16 4 4 12 12 16 24 16h13.674l-1.634 11.434a4 4 0 0 0 3.394 4.525 4.062 4.062 0 0 0 .57.041 4.003 4.003 0 0 0 3.956-3.436L45.755 112h27.122l3.242 12.969a4 4 0 0 0 7.762-1.94L81.123 112H104a8 8 0 0 0 8-8V64a19.436 19.436 0 0 0 16-8c-6.332-.334-16-4-16-4zM64 40a8 8 0 1 1 8 8 8 8 0 0 1-8-8z">
-                            </path>
-                        </g>
-                    </svg>
-                    <span class="hidden md:block">Profile</span>
+                <!-- <li class="flex cursor-pointer items-center justify-center gap-4 font-bold md:justify-start" -->
+                <!--     wire:click="redirectTo('/dashboard')"> -->
+                <!--     <svg class="text-rose-400" id="bird" -->
+                <!--          xmlns="http://www.w3.org/2000/svg" width="30" -->
+                <!--          viewBox="0 0 128 128"> -->
+                <!--         <g data-name="Layer 2"> -->
+                <!--             <path fill="currentcolor" -->
+                <!--                   d="M112 52s11.125-3.875 15.998-12c-6.371.875-13.666-.666-15.998-3.998V16a8 8 0 0 0-8-8H40.251s8-2.668 7.25-5c-.956-2.977-9.667.75-16.834 3.75 1.917-2.084 3.417-4.168 3.167-6.75-5.07 1.285-9.365 5.703-11.343 8.145-.027.005-.055.007-.082.013.594-1.154 2.06-4.117 1.675-5.658A14.557 14.557 0 0 0 16 16v76c0 8-8 12-16 4 4 12 12 16 24 16h13.674l-1.634 11.434a4 4 0 0 0 3.394 4.525 4.062 4.062 0 0 0 .57.041 4.003 4.003 0 0 0 3.956-3.436L45.755 112h27.122l3.242 12.969a4 4 0 0 0 7.762-1.94L81.123 112H104a8 8 0 0 0 8-8V64a19.436 19.436 0 0 0 16-8c-6.332-.334-16-4-16-4zM64 40a8 8 0 1 1 8 8 8 8 0 0 1-8-8z"> -->
+                <!--             </path> -->
+                <!--         </g> -->
+                <!--     </svg> -->
+                <!--     <span class="hidden md:block">Profile</span> -->
                 </li>
                 <li class="flex cursor-pointer items-center justify-center gap-4 font-bold md:justify-start"
                     wire:click="logout">

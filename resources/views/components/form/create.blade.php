@@ -2,24 +2,24 @@
     'reference' => 'editor',
 ])
 
-<div class="w-full" x-init="() => editor = init($refs.{{ $reference }})" x-data="setupEditor(
+<div class="w-full" x-init="() => creator = init($refs.{{ $reference }})" x-data="setupEditor(
     $wire.entangle('{{ $attributes->wire('model')->value() }}').live)" wire:ignore
      {{ $attributes->whereDoesntStartWith('wire:model') }}>
     <div class="mb-2 flex gap-2">
         <x-form.button
-                       @click.prevent="editor.chain().focus().toggleBold().run()">
+                       @click.prevent="creator.chain().focus().toggleBold().run()">
             B
         </x-form.button>
         <x-form.button
-                       @click.prevent="editor.chain().focus().toggleItalic().run()">
+                       @click.prevent="creator.chain().focus().toggleItalic().run()">
             <i>I</i>
         </x-form.button>
         <x-form.button
-                       @click.prevent="editor.chain().focus().toggleUnderline().run()">
+                       @click.prevent="creator.chain().focus().toggleUnderline().run()">
             <u>U</u>
         </x-form.button>
         <x-form.button
-                       @click.prevent="editor.chain().focus().toggleOrderedList().run()">
+                       @click.prevent="creator.chain().focus().toggleOrderedList().run()">
             1.
         </x-form.button>
         <x-form.button class="px-1"

@@ -1,4 +1,4 @@
-<div class="relative flex space-x-2 border-t border-t-rose-400 p-4">
+<div class="relative flex space-x-2 border-t border-rose-400 p-4 last:border-b">
     <div class="flex-1">
         <div
              class="relative z-0 flex items-start justify-between text-white dark:text-gray-400">
@@ -13,8 +13,10 @@
                     @endunless
                 </div>
             </div>
-            <button class="flex justify-start"
-                    wire:click="openDropdown">...</button>
+            @if ($chirp->user->id == $user->id)
+                <button class="flex justify-start" wire:click="openDropdown"
+                        wire:blur.debounce.100ms.prevent="closeDropdown">...</button>
+            @endif
         </div>
         @if ($editing)
             <livewire:chirps.edit :chirp='$chirp' />
@@ -25,12 +27,14 @@
             <div
                  class="absolute right-2 top-2 z-[999] w-32 rounded border border-rose-400 bg-gray-800 shadow shadow-rose-400">
                 <ul class="w-full">
-                    <li>
-                        <button class="w-full cursor-pointer rounded-t-md border-b border-b-rose-400/20 px-4 py-2 hover:bg-gray-700"
-                                wire:click.prevent="edit">
-                            Edit
-                        </button>
-                    </li>
+                    @if (!$editing)
+                        <li>
+                            <button class="w-full cursor-pointer rounded-t-md border-b border-b-rose-400/20 px-4 py-2 hover:bg-gray-700"
+                                    wire:click.prevent="edit">
+                                Edit
+                            </button>
+                        </li>
+                    @endif
                     <li>
                         <button class="relative z-[999] w-full cursor-pointer rounded-t-md border-b border-b-rose-400/20 px-4 py-2 hover:bg-gray-700"
                                 wire:click.prevent="delete">

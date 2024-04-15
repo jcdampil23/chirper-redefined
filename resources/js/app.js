@@ -71,7 +71,7 @@ window.setupEditor = function (content) {
 }
 
 window.viewEditor = function (content) {
-    let editor
+    let viewEditor;
     const customOL = OrderedList.configure({
         HTMLAttributes: {
             class: 'list-decimal ml-5',
@@ -85,7 +85,7 @@ window.viewEditor = function (content) {
     return {
         content: content,
         init(element) {
-            editor = new Editor({
+            viewEditor = new Editor({
                 element: element,
                 extensions: [
                     Document,
@@ -109,8 +109,8 @@ window.viewEditor = function (content) {
                 },
                 editable: false
             })
-            editor.commands.setContent(content, false)
-            return editor;
+            viewEditor.commands.setContent(content, false)
+            return viewEditor;
         }
     }
 }

@@ -3,15 +3,22 @@
 namespace App\Livewire\Chirps;
 
 use App\Models\Chirps\ChirpModel;
+use App\Models\User;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
 class Chirp extends Component
 {
     public ChirpModel $chirp;
+    public User $user;
     public $open = false;
 
     public $editing = false;
+
+    public function mount(): void
+    {
+        $this->user = auth()->user();
+    }
 
     public function closeEdit(): void
     {
