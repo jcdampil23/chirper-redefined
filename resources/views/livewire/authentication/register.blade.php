@@ -14,18 +14,21 @@
             <x-form.label for="name">Full Name</x-form.label>
             <x-form.input id="name" name="name" type="text"
                           wire:model="form.name" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.name')" />
         </div>
 
         <div>
             <x-form.label for="email">Email</x-form.label>
             <x-form.input id="email" name="email" type="text"
                           wire:model="form.email" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.email')" />
         </div>
 
         <div>
             <x-form.label for="password">Password</x-form.label>
             <x-form.input id="password" name="password" type="password"
                           wire:model="form.password" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.password')" />
         </div>
 
         <div>
@@ -34,6 +37,7 @@
             <x-form.input id="password_confirmation"
                           name="password_confirmation" type="password"
                           wire:model="form.password_confirmation" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.password_confirmation')" />
         </div>
 
         <div class="flex justify-between">

@@ -20,8 +20,8 @@ class Edit extends Component
 
     public function update(): void
     {
-        $this->authorize('update', $this->chirp);
         $validated = $this->validate();
+        $this->authorize('update', $this->chirp);
         $this->chirp->update($validated);
         $this->dispatch('edit-closed.' . $this->chirp->id);
         $this->dispatch('chirp-updated');

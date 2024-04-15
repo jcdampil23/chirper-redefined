@@ -15,12 +15,14 @@
             <x-form.label for="email">Email</x-form.label>
             <x-form.input id="email" name="email" type="text"
                           wire:model="form.email" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.email')" />
         </div>
 
         <div>
             <x-form.label for="password">Password</x-form.label>
             <x-form.input id="password" name="password" type="password"
                           wire:model="form.password" />
+            <x-form.error class="mt-2" :messages="$errors->get('form.password')" />
         </div>
 
         <div class="flex items-center justify-between">

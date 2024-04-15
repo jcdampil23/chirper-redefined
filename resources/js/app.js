@@ -46,7 +46,7 @@ window.setupEditor = function (content) {
                 },
                 content: this.content,
                 onUpdate: ({ editor }) => {
-                    this.content = editor.getHTML()
+                    this.content = editor.isEmpty ? '' : editor.getHTML()
                 }
             })
 
