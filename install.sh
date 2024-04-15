@@ -7,6 +7,7 @@ docker run --rm \
            laravelsail/php83-composer:latest \
            composer install --ignore-platform-reqs
            npm install
+           npm run build
            php artisan key:generate
 
 ./vendor/bin/sail up -d
